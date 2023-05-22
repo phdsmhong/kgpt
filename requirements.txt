@@ -1,0 +1,6 @@
+streamlit==1.22.0
+langchain
+openai==0.27.7
+hnswlib
+chromadb
+tiktoken==0.4.0
