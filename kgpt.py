@@ -118,7 +118,7 @@ os.environ["OPENAI_API_KEY"] = openai_key
 
 if len(openai_key):
     #model_id = "gpt-3.5-turbo"
-    model_id = "gpt-4-32k"
+    model_id = "gpt-4"
     llm=ChatOpenAI(model_name = model_id, temperature=0.2)
 
     #loader1 = TextLoader('pdfdocs/test1.txt')
