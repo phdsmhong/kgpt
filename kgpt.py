@@ -93,9 +93,9 @@ st.markdown(""" <style> .font3 {
 url = "https://platform.openai.com/account/api-keys"
 st.markdown("""
 경주 GPT는 기존 챗GPT에 경주시 관련 지식을 in-context learning 방식으로 추가 학습시킨 AI입니다.  \
-경주 GPT는 23년 6월 경주시에서 개최된 한국정책학회 하계대회기간에 무료로 시연된 바 있으며 \
-챗GPT에 비해 경주에 관한 훨씬 더 상세한 정보를 제공할 수 있었습니다. \
-본 미니버젼은 랩의 예산 사정상 풀버젼(경주 GPT) 대비 약 5퍼센트 분량의 정보만을 훈련시킨 AI입니다. \
+경주 GPT는 챗GPT에 비해 경주에 관한 보다 더 상세한 정보를 제공할 수 있으며, \
+한국정책학회 하계대회기간에 무료로 시연될 예정입니다. \
+본 미니버젼은 랩의 예산 사정상 풀버젼(경주 GPT) 대비 약 10퍼센트 분량의 정보만을 습득하였습니다. \
 본 미니버젼을 사용하기 위해서는 OpenAI에 유료계정과 API를 생성하셔야 합니다. [API Key 생성하러 가기](%s)
 """ % url)
 ################################
@@ -117,7 +117,8 @@ openai_key = st.text_input(label=" ", label_visibility="collapsed")
 os.environ["OPENAI_API_KEY"] = openai_key
 
 if len(openai_key):
-    model_id = "gpt-3.5-turbo"
+    #model_id = "gpt-3.5-turbo"
+    model_id = "gpt-4-32k"
     llm=ChatOpenAI(model_name = model_id, temperature=0.2)
 
     #loader1 = TextLoader('pdfdocs/test1.txt')
